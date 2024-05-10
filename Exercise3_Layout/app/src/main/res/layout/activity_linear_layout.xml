@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".LinearLayout">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/purple_200" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/teal_200" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/purple_200" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        android:background="@color/yellow_500"/>
+
+</LinearLayout>

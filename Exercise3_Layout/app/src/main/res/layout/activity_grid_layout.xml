@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="2"
+    tools:context=".GridLayout">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/red_900" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/yellow_500" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="15pt"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/teal_200" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        android:background="@color/teal_700"/>
+
+</GridLayout>
