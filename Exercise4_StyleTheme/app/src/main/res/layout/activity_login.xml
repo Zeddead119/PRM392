@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_3"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/signin"
+        style="@style/SignInTextStyle"
+        android:text="@string/sign_in" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/username"
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/username"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/signin"
+        android:hint="@string/username" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/LoginButtonStyle"
+        android:id="@+id/loginbtn"
+        android:layout_below="@id/password"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:id="@+id/forgotpass"
+        android:layout_below="@id/loginbtn"
+        android:text="@string/forgot_password"
+        style="@style/ForgotPasswordTextStyle"/>
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_above="@id/socialicon"
+        android:text="@string/or_sign_in_with"
+        style="@style/OtherSignInTextStyle"/>
+
+    <LinearLayout
+        android:id="@+id/socialicon"
+        style="@style/SocialIconsWrapStyle">
+
+        <ImageView
+            style="@style/SocialIconStyle"
+            android:contentDescription="TODO"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            style="@style/SocialIconStyle"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/google" />
+    </LinearLayout>
+</RelativeLayout>
