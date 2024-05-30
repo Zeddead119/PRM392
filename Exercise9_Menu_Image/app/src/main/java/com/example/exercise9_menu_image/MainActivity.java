@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(url == null || url.isEmpty() || url.equals("")) {
             Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_LONG).show();
+            iv3.setImageResource(R.drawable.anh3);
         }
         else {
             Picasso.get().load(url).into(iv3);
