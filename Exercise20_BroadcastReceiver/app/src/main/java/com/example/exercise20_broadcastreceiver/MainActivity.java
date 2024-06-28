@@ -1,10 +1,12 @@
 package com.example.exercise20_broadcastreceiver;
 
 import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     private WifiReceiver wifiReceiver = new WifiReceiver();
     private BlueToothReceiver bluetoothReceiver = new BlueToothReceiver();
+    private BatteryReceiver batteryReceiver;
 
+    private TextView txtBattery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        txtBattery = findViewById(R.id.txtBattery);
+        batteryReceiver = new BatteryReceiver(txtBattery);
     }
 
     @Override
@@ -50,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e(TAG, "Bluetooth - Failed to register receiver", e);
         }
+
+        try {
+            IntentFilter filter3 = new IntentFilter (Intent.ACTION_BATTERY_CHANGED);
+            registerReceiver(batteryReceiver, filter3);
+            Log.d(TAG, "Battery - Receiver registered successfully");
+        } catch (Exception e) {
+            Log.e(TAG, "Battery - Failed to register receiver", e);
+        }
     }
 
     @Override
@@ -58,8 +73,13 @@ public class MainActivity extends AppCompatActivity {
         if (wifiReceiver != null) {
             unregisterReceiver(wifiReceiver);
         }
+
         if (bluetoothReceiver != null) {
             unregisterReceiver(bluetoothReceiver);
+        }
+
+        if (batteryReceiver != null) {
+            unregisterReceiver(batteryReceiver);
         }
     }
 }
